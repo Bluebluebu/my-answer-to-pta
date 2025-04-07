@@ -1,0 +1,16 @@
+#include<stdio.h>
+int fun(int a,int b){
+    int big=a>b?a:b;
+    for(int i=big;i>0;i--){
+        if(a%i==0&&b%i==0){
+            return i;
+        }
+    }
+}
+int main(){
+    int up,down;
+    scanf("%d/%d",&up,&down);
+    int i=fun(up,down);
+    printf("%d/%d",up/i,down/i);
+    return 0;
+}
