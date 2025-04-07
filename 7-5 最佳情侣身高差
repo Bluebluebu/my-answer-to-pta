@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+    int count;
+    scanf("%d",&count);
+    getchar();
+    float res[15];
+    for(int i=0;i<count;i++){
+        char gen;
+        float height;
+        scanf("%c %f",&gen,&height);
+        getchar();
+        if(gen=='F'){
+            res[i]=height*1.09;
+        }else{
+            res[i]=height/1.09;
+        }
+    }
+    for(int j=0;j<count;j++){
+        printf("%.2f\n",res[j]);
+    }
+    return 0;
+}
