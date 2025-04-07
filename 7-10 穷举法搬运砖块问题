@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    int count=0;
+    int N;
+    scanf("%d",&N);
+    N=2*N;
+    for(int men=0;men<N/6+1;men++){
+        for(int wom=0;wom<N/4+1;wom++){
+            for(int chi=0;chi<N;chi++){
+                if((6*men+4*wom+chi==N)&&(2*(men+wom+chi)==N)){
+                    printf("men=%d women=%d child=%d\n",men,wom,chi);
+                    count++;
+                }
+            }
+        }
+    }
+    if(count==0){
+        printf("No solution!\n");
+    }
+    return 0;
+}
