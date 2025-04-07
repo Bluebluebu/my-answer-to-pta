@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char in[50];
+    gets(in);
+    for(int i=0;i<strlen(in);i++){
+        char t=in[i];
+        if(t=='c'||t=='C'){
+            printf("BEIJING OLYMPIC GAMES\n");
+        }else if(t=='j'||t=='J'){
+            printf("JAPAN WORLD CUP\n");
+        }else if(t=='k'||t=='K'){
+            printf("KOREA WORLD CUP\n");
+        }else{
+            printf("%c\n",t);
+        }
+    }
+    return 0;
+}
