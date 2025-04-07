@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+    double eps;
+    scanf("%lf",&eps);
+    double down=4.0;
+    double sum=1;
+    int sign=-1;
+    if(eps<1){//eps大于或等于首项就不用算
+        while(1.0/down>eps){
+            sum+=sign*1.0/down;
+            down+=3;
+            sign=-sign;
+        }//检测到下一个小于或者等于eps时跳出循环
+        //但是下一个小于或等于eps的数是要算在内的
+        sum+=sign*1.0/down;
+    }
+    printf("sum = %lf",sum);
+    return 0;
+}
