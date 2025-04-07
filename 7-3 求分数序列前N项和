@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    int in;
+    double sum=0.0;
+    scanf("%d",&in);
+    double up=2.0;
+    double down=1.0;
+    for(int i=1;i<=in;i++){
+        sum+=up/down;
+        double tem=up;
+        up=up+down;
+        down=tem;
+    }
+    printf("%.2lf",sum);
+    return 0;
+}
