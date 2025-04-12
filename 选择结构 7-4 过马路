@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+    int a,b;
+    scanf("%d %d",&a,&b);
+    if(b==0&&a!=2){
+         if(a==0){
+            printf("biii\n");
+            printf("stop");
+        }else{
+            printf("dudu\n");
+            printf("move");
+        }
+    }else{
+        printf("-\n");
+        if(a==2||a==0){
+            printf("stop");
+        }else{
+            printf("move");
+        }
+    }
+    return 0;
+}
