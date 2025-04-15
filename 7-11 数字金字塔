@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+    int repeat;
+    int n[12];
+    scanf("%d",&repeat);
+    getchar();
+    for(int t=0;t<repeat;t++){
+        scanf("%d",&n[t]);
+        getchar();
+    }
+    for(int count=0;count<repeat;count++){
+        for(int j=0;j<n[count];j++){
+            for(int k1=0;k1<n[count]-j-1;k1++){
+                printf("  ");
+            }
+            for(int k2=0;k2<2*j+1;k2++){
+                printf("%d ",j+1);
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}
