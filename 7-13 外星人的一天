@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(){
+    int dd[10],hh[10],mm[10];
+    int day[10],hour[10],min[10];
+    int temp[10];
+    int n;
+    scanf("%d",&n);
+    getchar();
+    //输入
+    for(int i=0;i<n;i++){
+        scanf("%d %2d:%2d",&dd[i],&hh[i],&mm[i]);
+        getchar();
+    }
+    //处理
+    for(int i=0;i<n;i++){
+        if(dd[i]==0){
+            day[i]=-1;
+            hour[i]=hh[i];
+            min[i]=mm[i];
+            continue;
+        }
+        temp[i]=60*((dd[i]-1)*24+hh[i])+mm[i];
+        temp[i]=temp[i]/2;
+
+        min[i]=temp[i];
+        hour[i]=min[i]/60;
+        min[i]=min[i]-hour[i]*60;
+        day[i]=hour[i]/24;
+        hour[i]=hour[i]-day[i]*24;
+    }
+    //输出
+    for(int i=0;i<n;i++){
+        printf("%d %'0'2d:%'0'2d\n",day[i]+1,hour[i],min[i]);
+    }
+    return 0;
+}
